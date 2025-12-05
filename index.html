@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up / Sign In</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <script>
+    // 🔹 Настройка Firebase
+    const firebaseConfig = {
+      apiKey: "ВАШ_API_KEY",
+      authDomain: "ВАШ_PROJECT_ID.firebaseapp.com",
+      projectId: "ВАШ_PROJECT_ID",
+      storageBucket: "ВАШ_PROJECT_ID.appspot.com",
+      messagingSenderId: "ВАШ_SENDER_ID",
+      appId: "ВАШ_APP_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+  </script>
+</head>
+<body>
+
+  <h2>Sign Up / Sign In Form</h2>
+
+  <div class="container">
+
+    <!-- Sign Up -->
+    <div class="form-container sign-up-container">
+      <form id="signup-form">
+        <h1>Create Account</h1>
+        <input type="email" id="email-signup" placeholder="Email" required />
+        <input type="password" id="password-signup" placeholder="Password" required />
+        <button>Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Sign In -->
+    <div class="form-container sign-in-container">
+      <form id="signin-form">
+        <h1>Sign in</h1>
+        <input type="email" id="email-signin" placeholder="Email" required />
+        <input type="password" id="password-signin" placeholder="Password" required />
+        <button>Sign In</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
